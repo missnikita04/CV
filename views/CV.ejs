@@ -14,15 +14,11 @@
       size: A4;
       margin: 1cm;
     }
-    html, body {
-  height: 100%;
-   /* prevent scrolling */
-}
 
 
     body {
       margin: 0;
-      font-family: "Segoe UI", sans-serif;
+      font-family: 'Times New Roman', Times, serif;
       background: #fff;
       color: #333;
     }
@@ -66,11 +62,14 @@
       padding-bottom: 4px;
       margin-bottom: 8px;
     }
+    .details{
+      padding: 10px;
+    }
 
     .details li {
       list-style: none;
       font-size: 13px;
-      margin: 6px 0;
+      margin: 4px 0px;
       display: flex;
       align-items: center;
     }
@@ -103,6 +102,30 @@
       border-radius: 4px;
       margin-top: 4px;
     }
+    /*     ----------------DOWNLOAD button-------------- */
+    .Download-btn{
+       background-color:white ; /* dark blue */
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 50px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.2s;
+  display: inline-block;
+   text-align: center;
+}
+    
+    .Download-btn a{
+      color: #123d6f;
+      text-decoration: none;
+      padding: 0px 30px;
+      
+    }
+    .Download-btn:hover {
+  background-color:#add8ff; /* slightly darker on hover */
+  transform: scale(1.05);     /* small pop effect */
+}
 
     /* ------------------ CONTENT ------------------ */
     .content {
@@ -212,6 +235,26 @@
         padding-bottom: 0px;
       }
 
+      /* dowmload btn */
+     .header-2{
+      display: flex;
+      justify-content: space-between;
+
+      }
+      .Download-btn{
+    padding: 20px 16px;
+    font-size: 13px;
+  height: auto;
+  width:100px;
+  
+
+  }
+  .Download-btn a{
+    padding:0px  10px;
+  }
+    
+
+
   /* Reduce spacing between paragraph and list */
     }
 
@@ -264,8 +307,24 @@
     .Certificates ul{
     margin: 1px;
   }
+  .sidebar{
+          background-color: #123d6f;
+
+  }
 
     }
+    /* download-------------------- */
+      .Download-btn{
+    padding: 15px 10px;
+    font-size: 13px;
+  height: 15px;
+  width:100px;
+  
+
+  }
+  .Download-btn a{
+    padding:0px  10px;
+  }
 
     /* ------------------ PRINT ------------------ */
     @media print {
@@ -274,7 +333,17 @@
     padding: 0;
     height: auto;
   }
+.header h1 {
+  color: white;
 
+
+}
+.Skills-h2{
+  color: white;
+}
+.details-h2{
+  color: white;
+}
       .resume {
     display: flex;
     flex-direction: row; /* keep sidebar + content side by side */
@@ -303,6 +372,9 @@
     line-height: 1.2;
     color: #000; /* ensure printed */
   }
+  .skills li{
+    color: white;
+  }
 .skills .bar { display: none; } /* remove bars to save space */
        section { page-break-inside: avoid; }
       
@@ -312,13 +384,20 @@
 <body>
   <div class="resume">
     <aside class="sidebar">
-      <div class="header">
+      <div class="header-2">
+ <div class="header">
         <h1>Nikita Chauhan</h1>
         <p>Full Stack Web Developer</p>
       </div>
+      <div class="Download-btn">
+        <a href="/Nikita-CV.pdf" target="_blank" download >Download CV</a>
+      </div>
+      </div>
+     
+      
 
       <section>
-        <h2>Personal Details</h2>
+        <h2 class="details-h2">Personal Details</h2>
         <ul class="details">
           <li><i class="fas fa-envelope icon"></i><a href="mailto:nikitachauhan3802@gmail.com">nikitachauhan3802@gmail.com</a></li>
           <li><i class="fas fa-phone icon"></i><span>+91 7742857177</span></li>
@@ -328,13 +407,15 @@
         </ul>
       </section>
 
-      <section>
-        <h2>Skills</h2>
+      <section >
+        <h2 class="Skills-h2">Skills</h2>
         <ul class="skills">
           <li><span>Java</span><div class="bar" style="width: 90%"></div></li>
           <li><span>HTML</span><div class="bar" style="width: 90%"></div></li>
           <li><span>CSS</span><div class="bar" style="width: 80%"></div></li>
           <li><span>JavaScript</span><div class="bar" style="width: 85%"></div></li>
+           <li><span>React</span><div class="bar" style="width: 80%"></div></li>
+
           <li><span>PHP</span><div class="bar" style="width: 85%"></div></li>
           <li><span>Node Js</span><div class="bar" style="width: 85%"></div></li>
           <li><span>Express Js</span><div class="bar" style="width: 85%"></div></li>
