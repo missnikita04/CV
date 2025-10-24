@@ -188,10 +188,10 @@
       }
 
       .details {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 columns */
-    gap: 5px; /* spacing between items */
-  }
+ display: grid;                   /* make it grid */
+  grid-template-columns: 1fr 1fr;  /* two equal columns */
+  column-gap: 20px;                /* horizontal spacing between columns */
+  row-gap: 8px;                  /* optional: vertical spacing between items */  }
 
   .details li {
     margin: 3px 0;
@@ -253,9 +253,10 @@
         height: 4px;
       }
       .details {
-    grid-template-columns: repeat(2, 1fr); /* keep 2 columns on small phones */
-    gap: 3px;
-  }
+ display: grid;                   /* make it grid */
+  grid-template-columns: 1fr 1fr;  /* two equal columns */
+  column-gap: 20px;                /* horizontal spacing between columns */
+  row-gap: 8px;       }
 
   .details li {
     font-size: 11px;
