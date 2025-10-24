@@ -1,31 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Nikita Chauhan.-Resume</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nikita Chauhan - Resume</title>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
   <style>
+    /* ------------------ GENERAL STYLES ------------------ */
     @page {
       size: A4;
       margin: 1cm;
     }
-    @media print {
-      body {
-        margin: 0;
-        box-shadow: none;
-      }
-    }
+
     body {
       margin: 0;
       font-family: "Segoe UI", sans-serif;
       background: #fff;
       color: #333;
     }
+
     .resume {
       display: flex;
       width: 100%;
@@ -34,30 +30,38 @@
       margin: auto;
       border: 1px solid #ccc;
     }
+
+    /* ------------------ SIDEBAR ------------------ */
     .sidebar {
       width: 30%;
       background-color: #123d6f;
       color: #fff;
       padding: 20px;
+      box-sizing: border-box;
     }
+
     .sidebar h1 {
       margin: 0;
       font-size: 24px;
     }
+
     .sidebar p {
       font-size: 15px;
       margin-bottom: 20px;
       color: rgb(212, 213, 216);
     }
+
     .sidebar section {
       margin-bottom: 20px;
     }
+
     .sidebar h2 {
       font-size: 16px;
       border-bottom: 1px solid #fff;
       padding-bottom: 4px;
       margin-bottom: 8px;
     }
+
     .details li {
       list-style: none;
       font-size: 13px;
@@ -65,10 +69,12 @@
       display: flex;
       align-items: center;
     }
+
     .details li i {
       flex-shrink: 0;
       color: #add8ff;
     }
+
     .details li a,
     .details li span {
       margin-left: 6px;
@@ -76,23 +82,30 @@
       word-break: break-word;
       text-decoration: none;
     }
+
     .skills li {
       margin: 8px 0;
       font-size: 13px;
     }
+
     .skills span {
       display: block;
     }
+
     .bar {
       height: 6px;
       background-color: #add8ff;
       border-radius: 4px;
       margin-top: 4px;
     }
+
+    /* ------------------ CONTENT ------------------ */
     .content {
       width: 70%;
       padding: 20px;
+      box-sizing: border-box;
     }
+
     .content h2 {
       color: #123d6f;
       border-bottom: 2px solid #ccc;
@@ -100,198 +113,268 @@
       margin-top: 16px;
       font-size: 18px;
     }
+
     .content p,
     .content li {
       font-size: 13px;
       line-height: 1.6;
     }
+
     .content ul {
       padding-left: 18px;
     }
+
     strong {
       font-size: 14px;
       color: #000;
     }
+
     .icon {
       margin-right: 6px;
       color: #add8ff;
     }
+
+    /* ------------------ RESPONSIVE ------------------ */
+    @media screen and (max-width: 768px) {
+      .resume {
+        flex-direction: column;
+        min-height: auto;
+        border: none;
+      }
+
+      .sidebar, .content {
+        width: 100%;
+        padding: 15px;
+      }
+
+      .sidebar h1 {
+        font-size: 20px;
+      }
+      .skills {
+    display: grid;
+ grid-template-columns: repeat(3, 1fr); /* 3 columns */  
+   gap: 10px; /* space between columns */
+  }
+
+  .skills li {
+    margin: 6px 0;
+  }
+
+  /* Remove the skill bars */
+  .skills .bar {
+    display: none;
+  }
+
+
+      .sidebar p,
+      .details li,
+      .skills li,
+      .content p,
+      .content li {
+        font-size: 12px;
+      }
+
+      .bar {
+        height: 5px;
+      }
+
+      .content h2 {
+        font-size: 16px;
+      }
+
+      .details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    gap: 5px; /* spacing between items */
+  }
+
+  .details li {
+    margin: 3px 0;
+  }
+  .Certificates p{
+    margin: 2px;
+
+  }
+  .Certificates ul{
+    margin: 0px;
+  }
+   .sidebar{
+        padding-left: 10px;
+        padding-bottom: 0px;
+      }
+      .content{
+        padding-left: 10px;
+        padding-bottom: 0px;
+      }
+
+  /* Reduce spacing between paragraph and list */
+    }
+
+    /* ---------------------480----------------------------------------------------------------------- */
+    @media screen and (max-width: 480px) {
+      .sidebar h1 {
+        font-size: 18px;
+      }
+     
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* keep 3 columns on smaller phones too */
+    gap: 8px;
+  }
+  .skills li {
+    font-size: 11px; /* smaller text */
+  }
+     .sidebar{
+        padding-left: 10px;
+        padding-bottom: 0px;
+      }
+
+
+
+  
+      .sidebar p,
+      .details li,
+      .skills li,
+      .content p,
+      .content li {
+        font-size: 11px;
+      }
+
+      .content h2 {
+        font-size: 14px;
+      }
+
+      .bar {
+        height: 4px;
+      }
+      .details {
+    grid-template-columns: repeat(2, 1fr); /* keep 2 columns on small phones */
+    gap: 3px;
+  }
+
+  .details li {
+    font-size: 11px;
+  }
+    .Certificates ul{
+    margin: 1px;
+  }
+
+    }
+
+    /* ------------------ PRINT ------------------ */
+    @media print {
+      body {
+        margin: 0;
+        box-shadow: none;
+      }
+
+      .resume {
+        flex-direction: column;
+        width: 100%;
+        min-height: auto;
+        border: none;
+      }
+
+      .sidebar, .content {
+        width: 100%;
+        padding: 10px;
+      }
+
+      h1, h2 {
+        font-size: smaller;
+      }
+
+      .bar {
+        height: 4px;
+      }
+      
+    }
   </style>
-  <body>
-    <div class="resume">
-      <aside class="sidebar">
-        <div class="header">
-          <h1>Nikita chauhan</h1>
-          <p>Full Stack Web Developer</p>
-        </div>
-        <section>
-          <h2>Personal Details</h2>
-          <ul class="details">
-            <li>
-              <i class="fas fa-envelope icon"></i
-              ><a href="mailto:gopeshsharma594@gmail.com"
-                >nikitachauhan3802@gmail.com</a
-              >
-            </li>
-            <li>
-              <i class="fas fa-phone icon"></i><span>+91 7742857177</span>
-            </li>
-            <li>
-              <i class="fas fa-map-marker-alt icon"></i
-              ><span>Azamgarh, Uttar pradesh</span>
-            </li>
-            <li>
-              <i class="fab fa-linkedin icon"></i
-              ><a href="https://www.linkedin.com/in/nikita-chauhan-2b91b32a1/"
-                >linkedin.com/in/nikita-chauhan-2b91b32a1</a
-              >
-            </li>
-            <li>
-              <i class="fab fa-github icon"></i
-              ><a href="https://github.com/missnikita04"
-                >github.com/Nikita Chauhan</a
-              >
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Skills</h2>
-          <ul class="skills">
-            <!-- <li><span>C, C++</span><div class="bar" style="width: 90%"></div></li> -->
-            <li>
-              <span>Java</span>
-              <div class="bar" style="width: 90%"></div>
-            </li>
-            <!-- <li><span>Python</span><div class="bar" style="width: 70%"></div></li> -->
-            <!-- <li><span>IOT</span><div class="bar" style="width: 80%"></div></li> -->
-            <li>
-              <span>HTML</span>
-              <div class="bar" style="width: 90%"></div>
-            </li>
-            <li>
-              <span>CSS</span>
-              <div class="bar" style="width: 80%"></div>
-            </li>
-            <li>
-              <span>JavaScript</span>
-              <div class="bar" style="width: 85%"></div>
-            </li>
-            <li>
-              <span>php</span>
-              <div class="bar" style="width: 85%"></div>
-            </li>
-            <li>
-              <span>Node Js</span>
-              <div class="bar" style="width: 85%"></div>
-            </li>
-            <li>
-              <span>Express Js</span>
-              <div class="bar" style="width: 85%"></div>
-            </li>
-            <li>
-              <span>MongoDB</span>
-              <div class="bar" style="width: 80%"></div>
-            </li>
-            <li>
-              <span>MySQL</span>
-              <div class="bar" style="width: 80%"></div>
-            </li>
-            <li>
-              <span>DSA</span>
-              <div class="bar" style="width: 90%"></div>
-            </li>
-            <li>
-              <span>OOPs</span>
-              <div class="bar" style="width: 85%"></div>
-            </li>
-            <li>
-              <span>DBMS</span>
-              <div class="bar" style="width: 80%"></div>
-            </li>
-          </ul>
-        </section>
-      </aside>
-      <main class="content">
-        <section>
-          <h2>Education</h2>
-          <p>
-            <strong>Diploma</strong> (sept 2019 – july 2022)<br />
-            Government Polytechnic college Kota , Rajasthan<br />
-            <strong>percentage:</strong> 80%
-          </p>
+</head>
+<body>
+  <div class="resume">
+    <aside class="sidebar">
+      <div class="header">
+        <h1>Nikita Chauhan</h1>
+        <p>Full Stack Web Developer</p>
+      </div>
 
-          <p>
-            <strong>Bachelor of Technology</strong> (nov 2022 – May 2025)<br />
-            University Department of Rajasthan Technical University, Kota<br />
-            <strong>Overall CGPA:</strong> 8.4
-          </p>
-        </section>
-        <section>
-          <h2>Projects</h2>
-          <ul>
-            <li>
-              <strong>Prepaid Electrical System with Automation</strong
-              ><br />Developed a prepaid IoT-based electrical system enabling
-              remote monitoring and control of energy usage with real-time
-              balance deduction. Integrated smart energy meter with
-              microcontroller (e.g., Arduino/ESP32) for accurate power
-              consumption tracking and automated load management. Designed and
-              implemented a web dashboard to display user balance, consumption
-              trends, and recharge options..
-            </li>
-            <li>
-              <strong>Aamrkunjj-mango farm house in kota</strong><br />developed
-              a dynamic web application using php and MySQL to showcase
-              farmhouse services and facilities, manage booking and handle data
-              throught an admin panel, Focused on responsive design, secure
-              database integration and a user-friendly interface to improve
-              visitor interaction
-            </li>
-             <li>
-              <strong>TeaMood - Tea depend on your Mood</strong><br />developed
-              a php and mysql based web application that suggest tea varieties based on user preference and moods, implemented a dynamic recommendation , feature , secure databse management and a responsive interface to enhance user Experience
-            </li>
-            <li>
-              <strong>Women Safety Android Application</strong><br />Developed a
-              Women Safety Android application in Java featuring voice-activated
-              calling, power button trigger, and shake detection for emergency
-              situations in android studio using java.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Internships</h2>
-          <p>
-            <strong>Intern, website Development</strong><br />Pradeep digital
-            Marketing pvt Ltd (May 2024 - Jul 2024)
-          </p>
-          <ul>
-            <li>
-              <b>training institute:</b> completed training in frontend web.
-            </li>
-            <li>
-              <b>User Experience:</b> Helped design a responsive interface.
-            </li>
-            <li>
-              <b>Testing & Debugging:</b> Ensured app performance and
-              reliability.
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h2>Certificates</h2>
-          <p><strong>Pradeep digital Marketing</strong></p>
-          <ul>
-            <li>completed training in web such as frontend and php mysql</li>
-          </ul>
+      <section>
+        <h2>Personal Details</h2>
+        <ul class="details">
+          <li><i class="fas fa-envelope icon"></i><a href="mailto:nikitachauhan3802@gmail.com">nikitachauhan3802@gmail.com</a></li>
+          <li><i class="fas fa-phone icon"></i><span>+91 7742857177</span></li>
+          <li><i class="fas fa-map-marker-alt icon"></i><span>Azamgarh, Uttar Pradesh</span></li>
+          <li><i class="fab fa-linkedin icon"></i><a href="https://www.linkedin.com/in/nikita-chauhan-2b91b32a1/">linkedin.com/in/nikita-chauhan-2b91b32a1</a></li>
+          <li><i class="fab fa-github icon"></i><a href="https://github.com/missnikita04">github.com/NikitaChauhan</a></li>
+        </ul>
+      </section>
 
-          <p><strong> Udemy - learning platform</strong></p>
-          <ul>
-            <li>JavaScript complete Course</li>
-            <li>responsive Web Design Essentials-HTML5 CSS3</li>
-          </ul>
-        </section>
-      </main>
-    </div>
-  </body>
+      <section>
+        <h2>Skills</h2>
+        <ul class="skills">
+          <li><span>Java</span><div class="bar" style="width: 90%"></div></li>
+          <li><span>HTML</span><div class="bar" style="width: 90%"></div></li>
+          <li><span>CSS</span><div class="bar" style="width: 80%"></div></li>
+          <li><span>JavaScript</span><div class="bar" style="width: 85%"></div></li>
+          <li><span>PHP</span><div class="bar" style="width: 85%"></div></li>
+          <li><span>Node Js</span><div class="bar" style="width: 85%"></div></li>
+          <li><span>Express Js</span><div class="bar" style="width: 85%"></div></li>
+          <li><span>MongoDB</span><div class="bar" style="width: 80%"></div></li>
+          <li><span>MySQL</span><div class="bar" style="width: 80%"></div></li>
+          <li><span>DSA</span><div class="bar" style="width: 90%"></div></li>
+          <li><span>OOPs</span><div class="bar" style="width: 85%"></div></li>
+          <li><span>DBMS</span><div class="bar" style="width: 80%"></div></li>
+        </ul>
+      </section>
+    </aside>
+
+    <main class="content">
+      <section>
+        <h2>Education</h2>
+        <p><strong>Diploma</strong> (Sept 2019 – July 2022)<br />
+          Government Polytechnic College Kota, Rajasthan<br />
+          <strong>Percentage:</strong> 80%
+        </p>
+        <p><strong>Bachelor of Technology</strong> (Nov 2022 – May 2025)<br />
+          University Department of Rajasthan Technical University, Kota<br />
+          <strong>Overall CGPA:</strong> 8.4
+        </p>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <ul>
+          <li><strong>Prepaid Electrical System with Automation</strong><br />Developed a prepaid IoT-based electrical system enabling remote monitoring and control of energy usage with real-time balance deduction...</li>
+          <li><strong>Aamrkunjj - Mango Farmhouse in Kota</strong><br />Developed a dynamic web application using PHP & MySQL to showcase farmhouse services, manage bookings, and handle data through an admin panel...</li>
+          <li><strong>TeaMood - Tea Depending on Your Mood</strong><br />Developed a PHP & MySQL web application that suggests tea varieties based on user mood and preferences, with secure database management...</li>
+          <li><strong>Women Safety Android Application</strong><br />Developed a Women Safety Android application in Java featuring voice-activated calling, power button triggers, and shake detection for emergencies...</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Internships</h2>
+        <p><strong>Intern, Website Development</strong><br />Pradeep Digital Marketing Pvt Ltd (May 2024 - Jul 2024)</p>
+        <ul>
+          <li><b>Training Institute:</b> Completed training in frontend web development.</li>
+          <li><b>User Experience:</b> Helped design a responsive interface.</li>
+          <li><b>Testing & Debugging:</b> Ensured app performance and reliability.</li>
+        </ul>
+      </section>
+
+      <section class="Certificates">
+        <h2>Certificates</h2>
+        <p><strong>Pradeep Digital Marketing</strong></p>
+        <ul>
+          <li>Completed training in web development (frontend & PHP/MySQL)</li>
+        </ul>
+        <p><strong>Udemy - Learning Platform</strong></p>
+        <ul>
+          <li>JavaScript Complete Course</li>
+          <li>Responsive Web Design Essentials - HTML5 & CSS3</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+</body>
 </html>
