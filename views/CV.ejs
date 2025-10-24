@@ -14,6 +14,11 @@
       size: A4;
       margin: 1cm;
     }
+    html, body {
+  height: 100%;
+   /* prevent scrolling */
+}
+
 
     body {
       margin: 0;
@@ -263,30 +268,42 @@
 
     /* ------------------ PRINT ------------------ */
     @media print {
-      body {
-        margin: 0;
-        box-shadow: none;
-      }
+      body, html {
+    margin: 0;
+    padding: 0;
+    height: auto;
+  }
 
       .resume {
-        flex-direction: column;
-        width: 100%;
-        min-height: auto;
-        border: none;
-      }
-
-      .sidebar, .content {
-        width: 100%;
-        padding: 10px;
-      }
-
-      h1, h2 {
-        font-size: smaller;
-      }
-
-      .bar {
-        height: 4px;
-      }
+    display: flex;
+    flex-direction: row; /* keep sidebar + content side by side */
+    width: 100%;
+    height: 297mm; /* A4 height */
+    border: none;
+  }
+     .sidebar {
+    width: 30%;
+    background-color: #123d6f; /* optional: may not print in some browsers */
+    color: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+  .content {
+    width: 70%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+       h1, h2 {
+    font-size: smaller;
+    color: #000; /* ensure printed */
+  }
+   p, li {
+    font-size: 10px;
+    line-height: 1.2;
+    color: #000; /* ensure printed */
+  }
+.skills .bar { display: none; } /* remove bars to save space */
+       section { page-break-inside: avoid; }
       
     }
   </style>
